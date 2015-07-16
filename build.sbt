@@ -1,8 +1,10 @@
 name := "Spray SSE"
 
-version := "0.1"
+version := "0.2"
 
 scalaVersion := "2.11.7"
+
+enablePlugins(LibPlugin)
 
 resolvers += "spray repo" at "http://repo.spray.io"
 
