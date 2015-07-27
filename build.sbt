@@ -1,8 +1,10 @@
-name := "Spray SSE"
+name := "spray_sse"
 
-version := "0.2"
+version := "0.3-SNAPSHOT"
 
 scalaVersion := "2.11.7"
+
+organization := "com.thenewmotion"
 
 enablePlugins(LibPlugin)
 

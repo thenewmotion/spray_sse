@@ -1,5 +1,6 @@
+package com.thenewmotion.spray.sse
 
-import ServerSideEventsDirectives._
+import ServerSentEventsDirectives._
 import spray.http.HttpHeaders.RawHeader
 import akka.actor.{ActorSystem, ActorRef, Actor, Props}
 import spray.http.Uri.Path

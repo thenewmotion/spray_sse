@@ -1,3 +1,4 @@
+package com.thenewmotion.spray.sse
 
 import spray.http._
 import spray.can.Http
@@ -13,7 +14,7 @@ import util.{Success, Failure}
 import scala.language.postfixOps
 import scala.language.implicitConversions
 
-trait ServerSideEventsDirectives {
+trait ServerSentEventsDirectives {
 
   case class Message(data: String, event: Option[String], id: Option[String])
   case class RegisterClosedHandler(handler: () => Unit)
@@ -189,4 +190,4 @@ trait ServerSideEventsDirectives {
 
 }
 
-object ServerSideEventsDirectives extends ServerSideEventsDirectives
+object ServerSentEventsDirectives extends ServerSentEventsDirectives
