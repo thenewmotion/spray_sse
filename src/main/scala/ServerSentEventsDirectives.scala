@@ -9,6 +9,7 @@ import akka.actor._
 import akka.pattern.ask
 import scala.concurrent.duration._
 import util.{Success, Failure}
+import shapeless._
 
 // Enable scala features
 import scala.language.postfixOps
@@ -172,7 +173,7 @@ trait ServerSentEventsDirectives {
         } ~
         path("send") {
           post {
-            formFields("id", "token", "msg") { (id, token, msg) =>
+            formFields("id" :: "token" :: "msg" :: HNil) { (id, token, msg) =>
               // Get the channel and pass it to the messageHandler
               ( channelMapper ? GetChannel(id.toInt, token) ) onSuccess  {
                 case channel: ActorRef => messageHandler(channel, Message(msg))
