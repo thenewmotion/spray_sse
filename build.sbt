@@ -1,4 +1,4 @@
-name := "spray_sse"
+name := "spray-sse"
 
 scalaVersion := "2.11.7"
 
